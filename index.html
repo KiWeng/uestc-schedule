@@ -105,8 +105,6 @@
                 course_info.school ? course_info.school + " " : ""
               }${course_info.room_name}`;
 
-              console.log(location);
-
               const re_duration = /(\d+)-(\d+)/g;
               const week_duration = re_duration.exec(course_info.kksd);
               const [start_week, end_week] = [
@@ -151,7 +149,7 @@
                 duration
               );
             });
-            // cal.download();
+            cal.download();
           }); // TODO: handle if not found
       };
     </script>
