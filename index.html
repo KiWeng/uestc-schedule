@@ -10,12 +10,14 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="mb-3">
-      <h1>导出课表</h1>
+    <div class="">
+      <h1 class="">导出课表</h1>
     </div>
+    <br/>
     <div class="input-group mb-3">
       <input
         type="text"
@@ -69,7 +71,7 @@
         end_time,
         duration
       ) => {
-        const rrule = new Object();
+        const rrule = {};
         rrule.freq = "WEEKLY";
         rrule.count = duration;
         cal.addEvent(name, description, location, start_time, end_time, rrule);
